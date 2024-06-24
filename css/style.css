@@ -80,31 +80,18 @@ button:hover {
   cursor: pointer; /* Visual cue for interactivity */
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f6f6f9;
+
+/* Additional styles for navigation and responsiveness */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
+.hidden {
+  display: none;
 }
 
-h1 {
-  color: #333;
-  text-align: center;
-}
+/* Maintain previous styles and add/adjust as needed */
 
-p {
-  color: #666;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-top: 10px;
-}
 
