@@ -3,33 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Energy Consumption Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div id="content">
-        <h1>100.4t</h1>
-        <p>Amount of CO2e produced by our district in the last year...</p>
-        <h2>Where does our footprint come from?</h2>
-        <button id="energyButton">Energy usage</button>
-        <button id="solarButton">Solar panels</button>
-        <button id="gasButton">Natural gas</button>
-        <canvas id="myChart"></canvas>
-    </div>
-    <div class="thermostat-container">
-        <div class="info-display">
-            <h2>CO2 Emission Impact</h2>
-            <p id="temperatureDisplay">Temperature: 72°F</p>
-            <p id="co2Impact">Extra CO2: 0 kg</p>
-            <button id="switchSeason">Switch to Winter</button>
+    <div class="container">
+        <header>
+            <h1>Energy Consumption Dashboard</h1>
+            <nav>
+                <button id="homeButton">Home</button>
+                <button id="solarButton">Solar Energy</button>
+                <button id="gasButton">Gas Energy</button>
+                <button id="naturalButton">Natural Energy</button>
+            </nav>
+        </header>
+        <main id="content">
+            <section id="home">
+                <h2>Overview</h2>
+                <p>Amount of CO2e produced by our district in the last year...</p>
+                <canvas id="myChart"></canvas>
+            </section>
+            <section id="solar" class="hidden">
+                <h2>Solar Energy Usage</h2>
+                <p>Details about solar energy...</p>
+            </section>
+            <section id="gas" class="hidden">
+                <h2>Gas Energy Usage</h2>
+                <p>Details about gas energy...</p>
+            </section>
+            <section id="natural" class="hidden">
+                <h2>Natural Energy Practices</h2>
+                <p>Details about natural energy...</p>
+            </section>
+        </main>
+        <div class="thermostat-container">
+            <div class="info-display">
+                <h2>CO2 Emission Impact</h2>
+                <p id="temperatureDisplay">Temperature: 72°F</p>
+                <p id="co2Impact">Extra CO2: 0 kg</p>
+                <button id="switchSeason">Switch to Winter</button>
+            </div>
+            <div class="thermostat-animation">
+                <div id="lottieThermometer"></div>
+            </div>
         </div>
-        <div class="thermostat-animation">
-            <div id="lottieThermometer"></div>
-        </div>
     </div>
-    
-    
-    <script src="script.js"></script>
 </body>
 </html>
