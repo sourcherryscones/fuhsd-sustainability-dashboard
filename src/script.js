@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: '../animations/animation.json'  // Adjust based on your actual setup
+        path: '../animations/animation.json'  
     });
 
     let isSummer = true;
