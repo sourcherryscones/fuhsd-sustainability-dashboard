@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Consumption Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+</head>
+<body>
+    <div id="content">
+        <h1>100.4t</h1>
+        <p>Amount of CO2e produced by our district in the last year...</p>
+        <h2>Where does our footprint come from?</h2>
+        <button id="energyButton">Energy usage</button>
+        <button id="solarButton">Solar panels</button>
+        <button id="gasButton">Natural gas</button>
+        <canvas id="myChart"></canvas>
+    </div>
+    <div class="thermostat-container">
+        <div class="info-display">
+            <h2>CO2 Emission Impact</h2>
+            <p id="temperatureDisplay">Temperature: 72°F</p>
+            <p id="co2Impact">Extra CO2: 0 kg</p>
+            <button id="switchSeason">Switch to Winter</button>
+        </div>
+        <div class="thermostat-animation">
+            <div id="lottieThermometer"></div>
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
