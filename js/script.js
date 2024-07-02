@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: '../animations/animation.json'  
+        path: 'animations/animation.json'  
     });
 
     let isSummer = true;
