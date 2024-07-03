@@ -144,6 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }]
         },
         options: {
+            plugins:{
+                legend:{
+                    onClick: null
+                }
+            },
             scales: {
                 y: {
                     beginAtZero: true
