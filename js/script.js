@@ -3,10 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const montaVistaData = [
         {" Date":"11/20/2018","Total CO2 Emissions":333264.96},
         {" Date":"12/20/2018","Total CO2 Emissions":204859.35},
-        {" Date":"1/22/2019","Total CO2 Emissions":0.0},
-        {" Date":"2/21/2019","Total CO2 Emissions":0.0},
-        {" Date":"3/22/2019","Total CO2 Emissions":0.0},
-        {" Date":"4/23/2019","Total CO2 Emissions":0.0},
         {" Date":"5/22/2019","Total CO2 Emissions":455.67},
         {" Date":"6/21/2019","Total CO2 Emissions":84079.35},
         {" Date":"7/23/2019","Total CO2 Emissions":50771.52},
@@ -184,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateTemperatureDisplay() {
         document.getElementById('temperatureDisplay').textContent = `Temperature: ${temperature}°F`;
-        const extraCO2 = Math.abs(temperature - (isSummer ? 72 : 68)) * 5;
+        const extraCO2 = Math.abs(temperature - (isSummer ? 72 : 68)) * 10000;
         document.getElementById('co2Impact').textContent = `Extra CO2: ${extraCO2} kg`;
         const frame = mapTemperatureToFrame(temperature);
         lottieAnimation.goToAndStop(frame, true);
