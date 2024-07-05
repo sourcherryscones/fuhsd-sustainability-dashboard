@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // MVHS Data
     const montaVistaData = [ /* fetch whatever*/
         {" Date":"11/20/2018","Total CO2 Emissions":333264.96},
         {" Date":"12/20/2018","Total CO2 Emissions":204859.35},
@@ -123,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let labels = montaVistaData.map(data => data[' Date'].trim());
     let montaVistaEmissions = montaVistaData.map(data => data['Total CO2 Emissions']);
     let homesteadEmissions = homesteadData.map(data => data['Total Carbon Emissions']);
-
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'line',
@@ -164,21 +162,34 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-
-    // Toggle buttons for datasets
-    document.getElementById('toggleMontaVista').addEventListener('click', function () {
-        this.classList.toggle('bg-violet-200')
-        toggleDataset(myChart, 'MVHS');
-    });
-
-    document.getElementById('toggleHomestead').addEventListener('click', function () {
-        this.classList.toggle('bg-emerald-300')
-        toggleDataset(myChart, 'HHS');
-    });
-
-    function toggleDataset(chart, label) {
-        const dataset = chart.data.datasets.find(d => d.label === label);
-        dataset.hidden = !dataset.hidden;
-        chart.update();
+    
+    const bar_data = [
+        { category: 'Monta Vista', kwh: 70 },
+        { category: 'Homestead', kwh: 40 },
+        { category: 'Lynbrook', kwh: 50},
+        { category: 'Tino', kwh: 30 },
+        { category: 'Fremont', kwh: 36}
+    ];
+    
+    var ctx2 = document.getElementById('energyBarChart').getContext('2d');
+    var nrgBarChart = new Chart(
+        ctx2,
+        {
+        type: 'bar',
+        data: {
+            labels: bar_data.map(row => row.category),
+            datasets: [
+            {
+                label: 'kWh used, by school',
+                data: bar_data.map(row => row.kwh)
+            }
+            ]
+        }
+        ,
+        options:
+        {
+            indexAxis: 'y'
+        }
     }
+    );
 });

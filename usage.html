@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Energy Use Stats</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+        <!--<style type="text/tailwindcss">
+            @layer base {
+               .btn {
+                background-color: '#475569';
+               }
+            /* ... */
+            }
+        </style>-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+    </head>
+    <body>
+        <!--NAVBAR-->
+        <div class="navbar text-sky-600">
+            <a class="btn btn-ghost text-2xl font-bold" href="./index.html">FUHSD Sustainability</a>
+             <ul tabindex="0" class="menu menu-horizontal m-auto inline-flex">
+                 <li class="font-semibold"><a href="./co2.html">CO<sub>2</sub>e emissions</a></li>
+                 <li class="font-semibold"><a href="./usage.html">Energy use breakdown</a></li>
+                 <li class="font-semibold"><a href="./thermometer.html">HVAC simulation</a></li>
+                 <div class="badge badge-outline">more features coming soon!</div>
+             </ul>
+           </div> 
+        <!--END NAVBAR-->
+        <div class="m-10"> <!-- class="my-12 flex w-fit flex-col gap-4 px-4 md:w-[64rem] mx-5"-->
+            <!--everything goes in here!-->
+            <div id="chart" class="flex flex-row">
+                <div class="w-1/3 m-auto">
+                    <h2 class="text-2xl font-bold">Where does our footprint come from?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="w-5/12 m-auto">
+                    <canvas id="usageChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="m-10"> <!-- class="my-12 flex w-fit flex-col gap-4 px-4 md:w-[64rem] mx-5"-->
+            <!--everything goes in here!-->
+            <div id="chart" class="flex flex-row">
+                <div class="w-5/12 m-auto">
+                    <canvas id="energyBarChart"></canvas>
+                </div>
+                <div class="w-1/3 m-auto">
+                    <h2 class="text-2xl font-bold">How do our schools stack up?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+                </div>
+            </div>
+        </div>
+        <script src="js/usage_chart.js"></script>
+    </body>
+</html>

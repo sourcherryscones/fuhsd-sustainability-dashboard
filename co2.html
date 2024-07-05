@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Consumption Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <div class="navbar text-sky-600">
+        <a class="btn btn-ghost text-2xl font-bold" href="./index.html">FUHSD Sustainability</a>
+        <ul tabindex="0" class="menu menu-horizontal m-auto inline-flex">
+            <li class="font-semibold"><a href="./co2.html">CO<sub>2</sub>e emissions</a></li>
+            <li class="font-semibold"><a href="./usage.html">Energy use breakdown</a></li>
+            <li class="font-semibold"><a href="./thermometer.html">HVAC simulation</a></li>
+            <div class="badge badge-outline">more features coming soon!</div>
+        </ul>
+    </div>
+    <!--END NAVBAR-->
+    <!--END NAVBAR-->
+    <!--
+    </div>
+    -->
+    <div class="mx-7"> <!-- class="my-12 flex w-fit flex-col gap-4 px-4 md:w-[64rem] mx-5"-->
+        <!--everything goes in here!-->
+        <h2 class="text-2xl font-bold my-6 mb-0">Some quick stats</h2>
+
+
+        <div class="flex flex-row mx-auto space-x-5">
+        <div class="stat px-0">
+            <div class="stat-title text-slate-800">Total District CO2e</div>
+            <div class="stat-value text-5xl">100.4mt</div>
+            <div class="stat-desc">21% more than last month</div>
+        </div>
+        <div class="stat px-0">
+            <div class="stat-title text-slate-800">Total District CO2e</div>
+            <div class="stat-value text-5xl">100.4mt</div>
+            <div class="stat-desc">21% more than last month</div>
+        </div>
+        <div class="stat px-0">
+            <div class="stat-title text-slate-800">Total District CO2e</div>
+            <div class="stat-value text-5xl">100.4mt</div>
+            <div class="stat-desc">21% more than last month</div>
+        </div>
+        <div class="stat px-0">
+            <div class="stat-title text-slate-800">Total District CO2e</div>
+            <div class="stat-value text-5xl">100.4mt</div>
+            <div class="stat-desc">21% more than last month</div>
+        </div>
+    </div>
+    <div id="chart">
+
+        <h2 class="text-2xl font-bold my-6">Our CO2e emissions from energy use over time, by school</h2>
+        <div class="inline-flex">
+            <p class="text-l font-medium my-auto mr-3">Toggle schools:</p>
+            <button class="btn bg-violet-200" id="toggleMontaVista">MVHS</button>
+            <button class="btn" id="toggleHomestead">HHS</button>
+        </div>
+        <div class="flex flex-row">
+            <div class="w-4/5"><canvas id="myChart"></canvas></div>
+            <p class="w-1/5 ml-5 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
