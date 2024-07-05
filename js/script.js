@@ -144,6 +144,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }]
         },
         options: {
+            plugins: {
+                legend:{
+                    display:false,
+                    onClick: null
+                },
+                title:{
+                    display: false,
+                    font:{
+                        size: 30
+                    },
+                    text: 'CO2e emissions, by school'
+                }
+            },
             scales: {
                 y: {
                     beginAtZero: true
