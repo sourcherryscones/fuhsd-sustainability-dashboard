@@ -9,9 +9,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
     <script type="module">
       import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-      let test_arr = d3.csv('./data_files/mvhs.csv')
-      console.log('OMG IT WORKED MAYBE')
-      console.log(test_arr)
+      
+      function parse_csv(data){
+        for (let i = 0; i < data.length; i++){
+          data[i].Date = new Date(data[i].Date)
+          data[i].KWH = parseFloat(data[i].KWH)
+          data[i].Therms = parseFloat(data[i].Therms)
+        }
+      }
+
+      let mvhs_json = await d3.csv('./data_files/mvhs.csv', parse_csv)
+      let lhs_json = await d3.csv('./data_files/lhs.csv', parse_csv)
+      let hhs_json = await d3.csv('./data_files/hhs.csv', parse_csv)
+
+      console.log(hhs_json)
+
+      function calculate_totals(input_json){
+        kwh_sum = d3.sum(input_json, function(d){
+          return d.KWH
+        })
+        console.log(kwh_sum)
+        therm_sum = d3.sum(input_json, function(d){
+          return d.Therms
+        })
+        console.log(therm_sum)
+      }
+      calculate_totals(mvhs_json)
+      calculate_totals(lhs_json)
+      calculate_totals(hhs_json)
     </script>
 </head>
 <body>
